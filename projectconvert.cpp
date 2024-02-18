@@ -64,11 +64,16 @@ int main()
 
 void tempConverter(int start, int conv)
 {
+    int inputResult;
     if ((start == 1) && (conv == 2))
     {
         printf("You are converting Celsius to Fahrenheit\n");
         printf("Enter your Celsius degree: ");
-        scanf("%f", &input);
+        inputResult = scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*1.8 + 32;
         printf("%.2f Celsius is %.2f Fahrenheit\n", input, output);
     }
@@ -76,7 +81,10 @@ void tempConverter(int start, int conv)
     {
         printf("You are converting Fahrenheit to Celsius\n");
         printf("Enter your Fahrenheit degree: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = (5/9)*(input - 32);
         printf("%.2f Fahrenheit is %.2f Celsius\n", input, output);
     }
@@ -84,7 +92,10 @@ void tempConverter(int start, int conv)
     {
         printf("You are converting Celsius to Kelvin\n");
         printf("Enter your Celsius degree: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input + 273.15;
         printf("%.2f Celsius is %.2f Kelvin\n", input, output);
     }
@@ -92,7 +103,10 @@ void tempConverter(int start, int conv)
     {
         printf("You are converting Kelvin to Celsius\n");
         printf("Enter your Kelvin degree: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input - 273.15;
         printf("%.2f Kelvin is %.2f Celsius\n", input, output);
     }
@@ -100,7 +114,10 @@ void tempConverter(int start, int conv)
     {
         printf("You are converting Fahrenheit to Kelvin\n");
         printf("Enter your Fahrenheit degree: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = (input - 32)*(5/9) + 273.15;
         printf("%.2f Fahrenheit is %.2f Kelvin\n", input, output);
     }
@@ -108,7 +125,10 @@ void tempConverter(int start, int conv)
     {
         printf("You are converting Kelvin to Fahrenheit\n");
         printf("Enter your Kelvin degree: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = (input - 273.15)*(9/5) + 32;
         printf("%.2f Kelvin is %.2f Fahrenheit\n", input, output);
     }
@@ -124,7 +144,10 @@ void currConverter(int start, int conv)
     {
         printf("You are converting USD to EUR\n");
         printf("Enter your USD: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*0.92;
         printf("%.2f USD is %.2f EUR\n", input, output);
         printf("Note: These conversions are based on the exchange rate as of 01/2024\n");
@@ -133,7 +156,10 @@ void currConverter(int start, int conv)
     {
         printf("You are converting EUR to USD\n");
         printf("Enter your EUR: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*1.08;
         printf("%.2f EUR is %.2f USD\n", input, output);
         printf("Note: These conversions are based on the exchange rate as of 01/2024\n");
@@ -142,7 +168,10 @@ void currConverter(int start, int conv)
     {
         printf("You are converting USD to JPY\n");
         printf("Enter your USD: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*148.15;
         printf("%.2f USD is %.2f JPY\n", input, output);
         printf("Note: These conversions are based on the exchange rate as of 01/2024\n");
@@ -151,7 +180,10 @@ void currConverter(int start, int conv)
     {
         printf("You are converting JPY to USD\n");
         printf("Enter your JPY: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*0.0068;
         printf("%.2f JPY is %.2f USD\n", input, output);
         printf("Note: These conversions are based on the exchange rate as of 01/2024\n");
@@ -160,7 +192,10 @@ void currConverter(int start, int conv)
     {
         printf("You are converting EUR to JPY\n");
         printf("Enter your EUR: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*160.62;
         printf("%.2f EUR is %.2f JPY\n", input, output);
         printf("Note: These conversions are based on the exchange rate as of 01/2024\n");
@@ -169,7 +204,10 @@ void currConverter(int start, int conv)
     {
         printf("You are converting JPY to EUR\n");
         printf("Enter your JPY: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*0.0062;
         printf("%.2f JPY is %.2f EUR\n", input, output);
         printf("Note: These conversions are based on the exchange rate as of 01/2024\n");
@@ -186,7 +224,10 @@ void massConverter(int start, int conv)
     {
         printf("You are converting kilogram(kg) to ounces(oz)\n");
         printf("Enter your kilogram amount: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*35.27;
         printf("%.2f kg is %.2f oz\n", input, output);
     }
@@ -194,7 +235,10 @@ void massConverter(int start, int conv)
     {
         printf("You are converting ounces(oz) to kilogram(kg)\n");
         printf("Enter your ounces amount: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*0.03;
         printf("%.2f oz is %.2f kg\n", input, output);
     }
@@ -202,7 +246,10 @@ void massConverter(int start, int conv)
     {
         printf("You are converting kilogram(kg) to pounds(lbs)\n");
         printf("Enter your kilogram amount: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*2.2;
         printf("%.2f kg is %.2f lbs\n", input, output);
     }
@@ -210,7 +257,10 @@ void massConverter(int start, int conv)
     {
         printf("You are converting pounds(lbs) to kilogram(kg)\n");
         printf("Enter your pounds amount: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*0.45;
         printf("%.2f lbs is %.2f kg\n", input, output);
     }
@@ -218,7 +268,10 @@ void massConverter(int start, int conv)
     {
         printf("You are converting ounces(oz) to pounds(lbs)\n");
         printf("Enter your ounces amount: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input/16;
         printf("%.2f oz is %.2f lbs\n", input, output);
     }
@@ -226,7 +279,10 @@ void massConverter(int start, int conv)
     {
         printf("You are converting pounds(lbs) to ounces(oz)\n");
         printf("Enter your pounds amount: ");
-        scanf("%f", &input);
+        while (inputResult != 1) {
+            printf("Invalid input. Please enter a floating-point number.\n");
+            inputResult = scanf("%f", &input);
+        }
         output = input*16;
         printf("%.2f lbs is %.2f oz\n", input, output);
     }
